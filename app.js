@@ -9,13 +9,7 @@ function getUserID(address){
     console.clear();
     console.log(`${apiUserID}${address}.json?`)
     if(address.value!=""){
-        fetch(`${apiUserID}${address}.json?`, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
+        fetch(`${apiUserID}${address}.json?`)
         .then(resp=>resp.json())
         .then(data=>console.log(data))
         .catch(error=>result1.innerHTML="Error aagya "+error)
