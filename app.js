@@ -10,10 +10,10 @@ function getUserID(address){
     console.log(`${apiUserID}${address}.json?`)
     if(address.value!=""){
         fetch(`${apiUserID}${address}.json?`, {
-            method:'POST',
-            headers:{
-                "Content-Type":"application/json"
-            }
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
         .then(resp=>resp.json())
         .then(data=>console.log(data))
