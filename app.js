@@ -4,14 +4,13 @@ let result1 = document.querySelector('.result1');
 let result2 = document.querySelector('.result2');
 let result3 = document.querySelector('.result3');
 let result4 = document.querySelector('.result4');
-let apiUserID = `https://cors-anywhere.herokuapp.com/https://layer3.xyz/_next/data/bbG-Z2Zar2Bh6gk5UVczD/`
+let apiUserID = `https://layer3.xyz/_next/data/bbG-Z2Zar2Bh6gk5UVczD/`
 function getUserID(address){
     console.clear();
     console.log(`${apiUserID}${address}.json?`)
     if(address.value!=""){
         fetch(`${apiUserID}${address}.json?`, {
             method:'POST',
-            mode:'no-cors',
             headers:{
                 "Content-Type":"application/json"
             }
