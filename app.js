@@ -11,6 +11,7 @@ function getUserID(address){
     if(address.value!=""){
         fetch(`${apiUserID}${address}.json?`, {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
